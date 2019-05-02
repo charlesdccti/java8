@@ -4,6 +4,12 @@ public class Cliente implements Autentica{
    private String senha;
    private int pontos;
 
+   public Cliente(String nome, boolean status, String senha){
+    this.nome = nome;
+    this.status = status;
+    this.senha = senha;
+    }
+
    public Cliente(String nome, boolean status, String senha, int pontos){
        this.nome = nome;
        this.status = status;
