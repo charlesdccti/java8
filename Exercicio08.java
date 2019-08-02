@@ -1,10 +1,7 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.function.Consumer;
-
 
 public class Exercicio08 {
 
@@ -23,19 +20,17 @@ public class Exercicio08 {
         // System.out.println(palavras);
 
         // palavras.forEach(new Consumer<String>(){
-        //     public void accept(String palavra) {
-        //         System.out.println(palavra);
-        //     }
+        // public void accept(String palavra) {
+        // System.out.println(palavra);
+        // }
         // });
 
         palavras.forEach(s -> System.out.println(s));
     }
 }
 
+class ImprimirNaLinha implements Consumer<String> {
 
-
-class ImprimirNaLinha implements Consumer<String>{
-    
     public void accept(String s) {
         System.out.println(s);
     }
@@ -45,9 +40,9 @@ class ComparadorPorTamanho implements Comparator<String> {
 
     @Override
     public int compare(String s1, String s2) {
-        if(s1.length() < s2.length())
+        if (s1.length() < s2.length())
             return -1;
-        if(s1.length() > s2.length())
+        if (s1.length() > s2.length())
             return 1;
         return 0;
     }
