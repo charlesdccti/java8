@@ -18,10 +18,17 @@ public class Exercicio08 {
         // Consumer<String> consumidor = new ImprimirNaLinha();
         // palavras.forEach(consumidor); // -> Novo default method forEach
 
-        Comparator<? super String> comparador = new ComparadorPorTamanho();
-        palavras.sort(comparador);
+        // Comparator<? super String> comparador = new ComparadorPorTamanho();
+        // palavras.sort(comparador);
+        // System.out.println(palavras);
 
-        System.out.println(palavras);
+        // palavras.forEach(new Consumer<String>(){
+        //     public void accept(String palavra) {
+        //         System.out.println(palavra);
+        //     }
+        // });
+
+        palavras.forEach(s -> System.out.println(s));
     }
 }
 
