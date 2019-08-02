@@ -42,5 +42,16 @@ public class Lambdas {
 
         palavras.sort((s1, s2) -> s1.length() - s2.length());
         
+        // new Thread(new Runnable() {
+
+        //     @Override
+        //     public void run() {
+        //         System.out.println("Executando um Runnable");
+        //     }
+        
+        // }).start();
+
+        new Thread(() -> System.out.println("Executando um Runnable")).start();
+
     }
 }
