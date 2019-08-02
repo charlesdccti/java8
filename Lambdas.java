@@ -23,6 +23,9 @@ public class Lambdas {
 
         palavras.forEach(s -> System.out.println(s));
 
+        /**
+         * Uso de "classe anonimas" como parametro do "Method Defaout" sort()
+         */
         // palavras.sort(new Comparator<String>() {
         //     @Override
         //     public int compare(String s1, String s2) {
@@ -32,6 +35,15 @@ public class Lambdas {
         //             return 1;
         //         return 0;
         //     }
+        // });
+
+
+        // palavras.sort((s1, s2) -> {
+        //     if (s1.length() < s2.length())
+        //         return -1;
+        //     if (s1.length() > s2.length())
+        //         return 1;
+        //     return 0;
         // });
 
         // palavras.sort((s1, s2) -> {
