@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.function.Consumer;
@@ -14,15 +15,33 @@ public class Exercicio08 {
         palavras.add("Java");
         palavras.add("Charles Ferreira");
 
-        Consumer<String> consumidor = new ImprimirNaLinha();
-        palavras.forEach(consumidor); // -> Novo default method forEach
+        // Consumer<String> consumidor = new ImprimirNaLinha();
+        // palavras.forEach(consumidor); // -> Novo default method forEach
+
+        Comparator<? super String> comparador = new ComparadorPorTamanho();
+        palavras.sort(comparador);
+
+        System.out.println(palavras);
     }
 }
+
 
 
 class ImprimirNaLinha implements Consumer<String>{
     
     public void accept(String s) {
         System.out.println(s);
+    }
+}
+
+class ComparadorPorTamanho implements Comparator<String> {
+
+    @Override
+    public int compare(String s1, String s2) {
+        if(s1.length() < s2.length())
+            return -1;
+        if(s1.length() > s2.length())
+            return 1;
+        return 0;
     }
 }
