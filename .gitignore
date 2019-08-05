@@ -1,2 +1,4 @@
 *.class
 .vscode/launch.json
+.classpath
+.project
