@@ -1,4 +1,4 @@
-*.class
-.vscode/launch.json
-.classpath
-.project
+# Default ignored files
+/workspace.xml
+# Project exclude paths
+/../
