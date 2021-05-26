@@ -1,6 +1,11 @@
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @see multiplica todos os itens da lista por 12 usando lambda
+ * @author charles
+ *
+ */
 public class Exercicio02 {
 
     public static void main(String[] args) {
